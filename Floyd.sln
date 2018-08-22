@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Floyd", "Floyd\Floyd.csproj", "{D087502C-9DD3-4AD9-8D22-05057FFA3971}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShortestRoute", "ShortestRoute\ShortestRoute.csproj", "{86D55F65-2D2D-4502-A4FA-81B285B4ABF4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D087502C-9DD3-4AD9-8D22-05057FFA3971}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D087502C-9DD3-4AD9-8D22-05057FFA3971}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D087502C-9DD3-4AD9-8D22-05057FFA3971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D55F65-2D2D-4502-A4FA-81B285B4ABF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D55F65-2D2D-4502-A4FA-81B285B4ABF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D55F65-2D2D-4502-A4FA-81B285B4ABF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D55F65-2D2D-4502-A4FA-81B285B4ABF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
