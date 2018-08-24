@@ -39,14 +39,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.collectionListbox = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.c = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dijisktraCostLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.startingNodecomboBox1 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.destinationNodecomboBox2 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dijisktraPathtxt = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.restartBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nodeValueNumeric)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -168,7 +173,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(436, 128);
+            this.button1.Location = new System.Drawing.Point(471, 85);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 43);
             this.button1.TabIndex = 8;
@@ -179,36 +184,26 @@
             // collectionListbox
             // 
             this.collectionListbox.FormattingEnabled = true;
-            this.collectionListbox.Location = new System.Drawing.Point(16, 128);
+            this.collectionListbox.Location = new System.Drawing.Point(16, 155);
             this.collectionListbox.Name = "collectionListbox";
-            this.collectionListbox.Size = new System.Drawing.Size(394, 199);
+            this.collectionListbox.Size = new System.Drawing.Size(332, 199);
             this.collectionListbox.TabIndex = 9;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 347);
+            this.label3.Location = new System.Drawing.Point(12, 374);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 23);
             this.label3.TabIndex = 1;
             this.label3.Text = "Dijiskra\'s Path:";
             // 
-            // c
-            // 
-            this.c.AutoSize = true;
-            this.c.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.c.Location = new System.Drawing.Point(143, 343);
-            this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(24, 28);
-            this.c.TabIndex = 2;
-            this.c.Text = "A";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 382);
+            this.label5.Location = new System.Drawing.Point(12, 409);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 23);
             this.label5.TabIndex = 1;
@@ -218,7 +213,7 @@
             // 
             this.dijisktraCostLabel.AutoSize = true;
             this.dijisktraCostLabel.Font = new System.Drawing.Font("Sitka Text", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dijisktraCostLabel.Location = new System.Drawing.Point(143, 378);
+            this.dijisktraCostLabel.Location = new System.Drawing.Point(143, 405);
             this.dijisktraCostLabel.Name = "dijisktraCostLabel";
             this.dijisktraCostLabel.Size = new System.Drawing.Size(24, 28);
             this.dijisktraCostLabel.TabIndex = 2;
@@ -318,12 +313,68 @@
             this.destinationNodecomboBox2.TabIndex = 4;
             this.destinationNodecomboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(354, 157);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(320, 276);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // dijisktraPathtxt
+            // 
+            this.dijisktraPathtxt.Font = new System.Drawing.Font("Sitka Text", 14F);
+            this.dijisktraPathtxt.Location = new System.Drawing.Point(146, 367);
+            this.dijisktraPathtxt.Name = "dijisktraPathtxt";
+            this.dijisktraPathtxt.ReadOnly = true;
+            this.dijisktraPathtxt.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.dijisktraPathtxt.Size = new System.Drawing.Size(180, 31);
+            this.dijisktraPathtxt.TabIndex = 11;
+            this.dijisktraPathtxt.Text = "A";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(354, 131);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(177, 23);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Floyd\'s Distance Table";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(12, 129);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(145, 23);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Node Connections";
+            // 
+            // restartBtn
+            // 
+            this.restartBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.restartBtn.Location = new System.Drawing.Point(588, 85);
+            this.restartBtn.Name = "restartBtn";
+            this.restartBtn.Size = new System.Drawing.Size(86, 43);
+            this.restartBtn.TabIndex = 8;
+            this.restartBtn.Text = "Clear All";
+            this.restartBtn.UseVisualStyleBackColor = true;
+            this.restartBtn.Click += new System.EventHandler(this.restartBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(696, 471);
+            this.ClientSize = new System.Drawing.Size(696, 446);
+            this.Controls.Add(this.dijisktraPathtxt);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.collectionListbox);
+            this.Controls.Add(this.restartBtn);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.nextNodeBtn);
             this.Controls.Add(this.addNodeBtn);
@@ -333,17 +384,21 @@
             this.Controls.Add(this.endingNodeComboBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dijisktraCostLabel);
-            this.Controls.Add(this.c);
             this.Controls.Add(this.startingNodeLbl);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Shortest Route Calculator";
             ((System.ComponentModel.ISupportInitialize)(this.nodeValueNumeric)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,13 +417,17 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox collectionListbox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label c;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label dijisktraCostLabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox startingNodecomboBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox destinationNodecomboBox2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox dijisktraPathtxt;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button restartBtn;
     }
 }
 
